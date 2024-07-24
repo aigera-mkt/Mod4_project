@@ -3,7 +3,7 @@ class MoviesLibrary:
         movies_list = []
         self.data = {}
         for genre in genres:
-            self.data[genre] = movies_list
+            self.data[genre] = []
 
     def add_movie(self, genre, title):
         self.data[genre].append(title)
@@ -18,7 +18,5 @@ if __name__ == '__main__':
     library.add_movie('Комедия', 'Весёлый питонист')
     library.add_movie('Комедия', 'Три разраба и тестировщик')
     library.add_movie('Ужасы','Крик')
-    library.add_movie('Ужасы','Крик2')
-    library.add_movie('Комедия', 'Свадебный переполох')
 
     print(library.recommend('Комедия'))
